@@ -6,7 +6,7 @@ from telegram.ext import (
     ContextTypes, filters
 )
 
-BOT_TOKEN = "7633955990:AAHYGIh7wu4BKTpKNz17aUgbGWnPRUFKWas"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # مراحل گفتگو
 TITLE, PURCHASABLE, TYPE, STOCK = range(4)
@@ -126,3 +126,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
