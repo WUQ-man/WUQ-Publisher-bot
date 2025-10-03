@@ -117,14 +117,8 @@ def main():
 
     print("🤖 Bot is running...")
 
- app.run_polling(
-        drop_pending_updates=True,
-        allowed_updates=Update.ALL_TYPES,
-        pool_timeout=10
-    
-    # 🔥 تغییرات اصلی اینجاست:
     app.run_polling(
-        drop_pending_updates=True,  # حذف آپدیت‌های قدیمی
+        drop_pending_updates=True,
         allowed_updates=Update.ALL_TYPES,
         close_loop=False
     )
@@ -132,4 +126,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
