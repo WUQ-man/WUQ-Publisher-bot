@@ -6,6 +6,8 @@ from telegram.ext import (
     ContextTypes, filters
 )
 
+import os
+
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # مراحل گفتگو
@@ -126,4 +128,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
