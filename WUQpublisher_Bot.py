@@ -5,10 +5,13 @@ from telegram.ext import (
     Application, CommandHandler, MessageHandler, ConversationHandler,
     ContextTypes, filters
 )
-
 import os
 
+# گرفتن توکن از Environment
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+if not BOT_TOKEN:
+    raise ValueError("❌ BOT_TOKEN not set! Please add it in Render Environment Variables.")
 
 # مراحل گفتگو
 TITLE, PURCHASABLE, TYPE, STOCK = range(4)
@@ -128,5 +131,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
