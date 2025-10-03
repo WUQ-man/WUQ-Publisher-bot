@@ -116,6 +116,11 @@ def main():
     app.add_handler(conv_handler)
 
     print("🤖 Bot is running...")
+
+ app.run_polling(
+        drop_pending_updates=True,
+        allowed_updates=Update.ALL_TYPES,
+        pool_timeout=10
     
     # 🔥 تغییرات اصلی اینجاست:
     app.run_polling(
@@ -127,3 +132,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
