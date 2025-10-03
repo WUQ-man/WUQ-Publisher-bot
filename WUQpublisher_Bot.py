@@ -1,4 +1,3 @@
-﻿
 # -*- coding: utf-8 -*-
 
 from telegram import Update
@@ -117,7 +116,13 @@ def main():
     app.add_handler(conv_handler)
 
     print("🤖 Bot is running...")
-    app.run_polling()
+    
+    # 🔥 تغییرات اصلی اینجاست:
+    app.run_polling(
+        drop_pending_updates=True,  # حذف آپدیت‌های قدیمی
+        allowed_updates=Update.ALL_TYPES,
+        close_loop=False
+    )
 
 
 if __name__ == "__main__":
