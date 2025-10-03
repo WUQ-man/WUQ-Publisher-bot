@@ -1,6 +1,7 @@
 services:
   - type: web
-    name: wuq-telegram-bot
+    name: telegram-bot
     env: python
+    plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: python server.py
+    startCommand: python WUQpublisher_Bot.py
