@@ -1,0 +1,1 @@
+worker: python WUQpublisher_Bot.py
